@@ -1,14 +1,19 @@
+import { Converter } from "./models/Converter.model";
 import { Currency } from "./models/Currency.model";
 
 const main = async () => {
-  // Instantiation of Currency class
-  const currency = new Currency("BTC");
+  // Instantiation of Currency classes (source and target)
+  const currencySource = new Currency("BTC");
+  const currencyTarget = new Currency("USD");
+  // Get exchange rate for the target currency
+  await currencyTarget.getExchangeRate(currencySource.name);
 
-  // Initialization currency object to get the exchange rate
-  await currency.init();
+  // Instantiation of Converter class
+  const converter = new Converter(20, currencySource, currencyTarget);
+  converter.setConversion();
 
-  // Show currency
-  console.log("FROM :", currency);
+  // Display result of conversion
+  console.log(converter.toString());
 };
 
 main();
