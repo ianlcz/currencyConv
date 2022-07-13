@@ -16,7 +16,11 @@ export class Converter {
    * Conversion of the target currency
    */
   public async setConversion(): Promise<void> {
-    this.conversion = Number((this.amount * this.target.rate).toFixed(2));
+    if (isNaN(this.amount)) {
+      throw new Error("Amount must be numerical");
+    } else {
+      this.conversion = Number((this.amount * this.target.rate).toFixed(2));
+    }
   }
 
   /**
@@ -24,7 +28,10 @@ export class Converter {
    * @returns Currency conversion string
    */
   public toString(): string {
-    Number(2).toString();
-    return `${this.amount} ${this.source.name} = ${this.conversion} ${this.target.name}`;
+    if (isNaN(this.amount)) {
+      throw new Error("Amount must be numerical");
+    } else {
+      return `${this.amount} ${this.source.name} = ${this.conversion} ${this.target.name}`;
+    }
   }
 }
