@@ -1,10 +1,10 @@
 {
-  "name": "currencyconv",
+  "name": "moneyconv",
   "version": "1.0.0",
   "description": "Command line program that allows you to do currency conversions.",
   "main": "dist/app.js",
   "bin": {
-    "currencyconv": "dist/app.js"
+    "moneyconv": "dist/app.js"
   },
   "directories": {
     "bin": "./bin"
