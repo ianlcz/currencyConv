@@ -10,7 +10,7 @@
     "bin": "./bin"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=dev concurrently \"tsc -w\" \"nodemon -q . -a 2 -s eur -t 2\""
+    "dev": "cross-env NODE_ENV=dev concurrently \"tsc -w\" \"nodemon -q . -a 2\""
   },
   "keywords": [
     "cli-app",
