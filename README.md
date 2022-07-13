@@ -4,6 +4,8 @@ The goal of this project is to develop a command line program that allows you to
 
 It is based on data from the [Coinbase](https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs) REST API.
 
+This project was built using [Commander.js](https://www.npmjs.com/package/commander) solution, which allows to build command-line interfaces.
+
 ## Development Team
 
 - **Bordeaux Ynov Campus IT department :**
@@ -12,6 +14,7 @@ It is based on data from the [Coinbase](https://docs.cloud.coinbase.com/sign-in-
 
 ## Built with
 
+- [Commander.js](https://www.npmjs.com/package/commander) - The complete solution for node.js command-line interfaces.
 - [Visual Studio Code](https://code.visualstudio.com) - Code editor.
 
 ## Installation
